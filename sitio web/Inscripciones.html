@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSCRIPCIONES CECyTEO</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <style>
+
+        /* =========================
+           ESTILO GENERAL
+        ========================== */
+
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0F172A, #1E293B);
+            color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header{
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 20px;
+            border-bottom: 4px solid #22C55E;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .header-container{
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container img{
+            width: 130px;
+            margin-right: 25px;
+            border-radius: 15px;
+        }
+
+        h1{
+            font-size: 35px;
+            color: #F8FAFC;
+        }
+
+        /* =========================
+           MENU
+        ========================== */
+
+        nav{
+            background-color: #1E293B;
+            padding: 18px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li{
+            margin: 10px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #2563EB;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px rgba(37,99,235,0.4);
+        }
+
+        nav ul li a:hover{
+            background-color: #22C55E;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        main{
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .titulo{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo h2{
+            font-size: 45px;
+            color: #38BDF8;
+        }
+
+        .titulo p{
+            color: #CBD5E1;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           INFORMACIÓN
+        ========================== */
+
+        .info{
+            background-color: rgba(255,255,255,0.06);
+            padding: 35px;
+            margin-bottom: 40px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+            border-top: 5px solid #22C55E;
+        }
+
+        .info h2{
+            color: #38BDF8;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .info p{
+            color: #E2E8F0;
+            line-height: 1.9;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        /* =========================
+           IMAGEN
+        ========================== */
+
+        .imagen{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .imagen img{
+            width: 80%;
+            max-width: 800px;
+            border-radius: 25px;
+            border: 5px solid #22C55E;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+        }
+
+        /* =========================
+           LISTAS
+        ========================== */
+
+        .lista{
+            margin-top: 20px;
+            padding-left: 30px;
+            line-height: 2;
+            color: #E2E8F0;
+            font-size: 18px;
+        }
+
+        .lista li{
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           COSTO
+        ========================== */
+
+        .costo{
+            text-align: center;
+            font-size: 35px;
+            color: #22C55E;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer{
+            background-color: #020617;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 4px solid #22C55E;
+            color: #CBD5E1;
+        }
+
+        footer p{
+            margin: 10px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media screen and (max-width: 900px){
+
+            .header-container{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-container img{
+                margin-bottom: 15px;
+            }
+
+            h1{
+                font-size: 28px;
+            }
+
+            .titulo h2{
+                font-size: 35px;
+            }
+
+            .info{
+                padding: 25px;
+            }
+
+            .imagen img{
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-container">
+
+            <img src="imagen/logo.jpeg" alt="Logo CECyTEO">
+
+            <h1>
+                COLEGIO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS
+                DEL ESTADO DE OAXACA
+            </h1>
+
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="Inicio.html">INICIO</a></li>
+
+            <li><a href="Inscripciones.html">INSCRIPCIONES</a></li>
+
+            <li><a href="becas.html">BECAS</a></li>
+
+            <li><a href="docentes.html">DOCENTES</a></li>
+
+            <li><a href="actividades.html">ACTIVIDADES</a></li>
+
+            <li><a href="pec.html">PEC</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- TITULO -->
+
+        <section class="titulo">
+
+            <h2>
+                Proceso de Inscripciones
+            </h2>
+
+            <p>
+                El CECyTE EMSaD 45 San Pablo Tijaltepec brinda
+                oportunidades educativas a los jóvenes de la comunidad
+                y localidades cercanas, ofreciendo una formación
+                académica integral y de calidad.
+            </p>
+
+        </section>
+
+        <!-- IMAGEN -->
+
+        <section class="imagen">
+
+            <img src="imagen/inscri.jpeg" alt="Inscripciones CECyTEO">
+
+        </section>
+
+        <!-- INFORMACIÓN -->
+
+        <section class="info">
+
+            <h2>
+                Información General
+            </h2>
+
+            <p>
+
+                Las inscripciones en el CECyTE EMSaD 45 San Pablo
+                Tijaltepec representan el proceso mediante el cual
+                los estudiantes pueden ingresar a la institución
+                para continuar sus estudios de nivel medio superior.
+
+            </p>
+
+            <p>
+
+                La escuela busca brindar un ambiente adecuado para
+                el aprendizaje, fortaleciendo el desarrollo académico,
+                cultural y personal de cada estudiante.
+
+            </p>
+
+        </section>
+
+        <!-- DOCUMENTOS -->
+
+        <section class="info">
+
+            <h2>
+                Documentos Requeridos
+            </h2>
+
+            <ul class="lista">
+
+                <li>
+                    Certificado de secundaria o constancia de estudios.
+                </li>
+
+                <li>
+                    Carta de buena conducta.
+                </li>
+
+                <li>
+                    Acta de nacimiento.
+                </li>
+
+                <li>
+                    Certificado médico con tipo de sangre.
+                </li>
+
+                <li>
+                    CURP actualizada.
+                </li>
+
+                <li>
+                    Fotografías tamaño infantil en blanco y negro.
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- FECHAS -->
+
+        <section class="info">
+
+            <h2>
+                Fechas de Inscripción
+            </h2>
+
+            <ul class="lista">
+
+                <li>
+                    Las inscripciones generalmente se realizan
+                    del 10 al 14 de agosto de cada año.
+                </li>
+
+                <li>
+                    El proceso se lleva a cabo antes del inicio
+                    del nuevo ciclo escolar.
+                </li>
+
+                <li>
+                    Los estudiantes deberán entregar la documentación
+                    completa dentro de las fechas establecidas.
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- COSTOS -->
+
+        <section class="info">
+
+            <h2>
+                Costos
+            </h2>
+
+            <p class="costo">
+                $0.00
+            </p>
+
+            <p style="text-align:center;">
+
+                El proceso de inscripción es completamente gratuito.
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Ubicación: San Pablo Tijaltepec, Oaxaca
+        </p>
+
+        <p>
+            Facebook: CECyTE EMSaD 45
+        </p>
+
+        <p>
+            Correo: emsad45@gmail.com
+        </p>
+
+        <p>
+            WhatsApp: 951 158 3906
+        </p>
+
+    </footer>
+</body>
+
+</html>

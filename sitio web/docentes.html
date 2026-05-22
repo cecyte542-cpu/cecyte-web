@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOCENTES CECyTEO</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <style>
+
+        /* =========================
+           ESTILO GENERAL
+        ========================== */
+
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0F172A, #1E293B);
+            color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header{
+            background-color: rgba(15, 23, 42, 0.96);
+            padding: 20px;
+            border-bottom: 4px solid #22C55E;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .header-container{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-container img{
+            width: 120px;
+            margin-right: 25px;
+            border-radius: 15px;
+        }
+
+        h1{
+            font-size: 34px;
+            color: #F8FAFC;
+            margin: 0;
+        }
+
+        /* =========================
+           MENU
+        ========================== */
+
+        nav{
+            background-color: #1E293B;
+            padding: 18px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li{
+            margin: 10px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #2563EB;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px rgba(37,99,235,0.4);
+        }
+
+        nav ul li a:hover{
+            background-color: #22C55E;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        main{
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .titulo{
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .titulo h2{
+            font-size: 45px;
+            color: #38BDF8;
+            margin-bottom: 15px;
+        }
+
+        .titulo p{
+            color: #CBD5E1;
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================== */
+
+        .contenedor{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        /* =========================
+           TARJETAS
+        ========================== */
+
+        .tarjeta{
+            width: 320px;
+            background-color: rgba(255,255,255,0.06);
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+            transition: 0.4s;
+            border-top: 5px solid #22C55E;
+            backdrop-filter: blur(10px);
+        }
+
+        .tarjeta:hover{
+            transform: translateY(-10px);
+            background-color: rgba(255,255,255,0.10);
+        }
+
+        .tarjeta img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38BDF8;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px rgba(56,189,248,0.5);
+        }
+
+        .tarjeta h3{
+            color: #38BDF8;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .cargo{
+            color: #22C55E;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+            font-size: 18px;
+        }
+
+        .tarjeta p{
+            color: #E2E8F0;
+            line-height: 1.8;
+            text-align: justify;
+            font-size: 16px;
+        }
+
+        /* =========================
+           INFORMACION EXTRA
+        ========================== */
+
+        .info-extra{
+            margin-top: 70px;
+            background-color: rgba(255,255,255,0.06);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+
+        .info-extra h2{
+            color: #38BDF8;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .info-extra p{
+            color: #CBD5E1;
+            line-height: 1.9;
+            font-size: 18px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer{
+            background-color: #020617;
+            text-align: center;
+            padding: 35px;
+            margin-top: 70px;
+            border-top: 4px solid #22C55E;
+            color: #CBD5E1;
+        }
+
+        footer p{
+            margin: 12px;
+            font-size: 16px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media screen and (max-width: 900px){
+
+            .contenedor{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tarjeta{
+                width: 90%;
+            }
+
+            h1{
+                font-size: 26px;
+            }
+
+            .titulo h2{
+                font-size: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-container">
+
+            <img src="imagen/logo.jpeg" alt="Logo">
+
+            <h1>
+                DOCENTES Y PERSONAL CECyTEO
+            </h1>
+
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="Inicio.html">INICIO</a></li>
+
+            <li><a href="Inscripciones.html">INSCRIPCIONES</a></li>
+
+            <li><a href="becas.html">BECAS</a></li>
+
+            <li><a href="docentes.html">DOCENTES</a></li>
+
+            <li><a href="actividades.html">ACTIVIDADES</a></li>
+
+            <li><a href="pec.html">PEC</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- TITULO -->
+
+        <section class="titulo">
+
+            <h2>
+                Personal Educativo y Administrativo
+            </h2>
+
+            <p>
+                Conoce a algunos integrantes del personal académico y administrativo
+                del CECyTEO EMSaD 45, comprometidos con la formación y bienestar
+                de la comunidad estudiantil.
+            </p>
+
+        </section>
+
+        <!-- TARJETAS -->
+
+        <section class="contenedor">
+
+            <!-- DIRECTOR -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/jose.jpeg" alt="Director">
+
+                <h3>
+                     José Luis morales Martínez
+                </h3>
+
+                <span class="cargo">
+                    Director
+                </span>
+
+                <p>
+
+                    Responsable de dirigir y coordinar las actividades
+                    académicas y administrativas de la institución,
+                    promoviendo un ambiente educativo de calidad
+                    y fortaleciendo el desarrollo integral de los estudiantes.
+
+                </p>
+
+            </div>
+
+            <!-- SUBDIRECTOR -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/alxis.jpeg" alt="Subdirector">
+
+                <h3>
+                    Alexis German calderón mejía 
+                </h3>
+
+                <span class="cargo">
+                    Subdirector
+                </span>
+
+                <p>
+
+                    Encargado de apoyar en la organización escolar,
+                    supervisar actividades académicas y colaborar
+                    en el correcto funcionamiento administrativo
+                    de la institución educativa.
+
+                </p>
+
+            </div>
+
+            <!-- MAEVA -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/mae.jpeg" alt="Maeva">
+
+                <h3>
+                    Lic. Maeva Cabrera Vega
+                </h3>
+
+                <span class="cargo">
+                    Docente
+                </span>
+
+                <p>
+
+                    Licenciada en Informática y Maestra en Ciencias
+                    en Desarrollo Regional y Tecnológico.
+                    Cuenta con amplia experiencia docente y participación
+                    en proyectos académicos y educativos.
+
+                </p>
+
+            </div>
+
+            <!-- LISET -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/lis.jpeg" alt="Liset">
+
+                <h3>
+                    Lic. Lisette Rosado Ortiz
+                </h3>
+
+                <span class="cargo">
+                    Docente
+                </span>
+
+                <p>
+
+                    Docente asociada con experiencia en el área
+                    de contaduría y formación integral.
+                    Ha participado en diversos cursos y diplomados
+                    enfocados en el bienestar estudiantil.
+
+                </p>
+
+            </div>
+
+            <!-- IRENE -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/irene.jpeg" alt="Irene">
+
+                <h3>
+                    Lic. Irene Ana Mendoza Ríos
+                </h3>
+
+                <span class="cargo">
+                    Docente
+                </span>
+
+                <p>
+
+                    Licenciada en Lenguas Extranjeras en el área
+                    de inglés por la UABJO.
+                    Comprometida con la enseñanza y el desarrollo
+                    académico de los estudiantes.
+
+                </p>
+
+            </div>
+
+            <!-- PAULA -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/pau.jpeg" alt="Paula">
+
+                <h3>
+                    Ing. Paula Lidia Sánchez Hernández
+                </h3>
+
+                <span class="cargo">
+                    Docente
+                </span>
+
+                <p>
+
+                    Ingeniera en Ciencia y Tecnología de Alimentos
+                    y Maestra en Educación y Docencia.
+                    Cuenta con diversos diplomados en competencias
+                    docentes y formación educativa.
+
+                </p>
+
+            </div>
+
+            <!-- ROGELIO -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/mate.jpeg" alt="Rogelio">
+
+                <h3>
+                    Ing. Rogelio Bautista Barrios
+                </h3>
+
+                <span class="cargo">
+                    Docente
+                </span>
+
+                <p>
+
+                    Docente comprometido con el desarrollo académico
+                    y tecnológico de los estudiantes,
+                    participando constantemente en actividades
+                    educativas y formativas.
+
+                </p>
+
+            </div>
+
+            <!-- INTENDENTE -->
+
+            <div class="tarjeta">
+
+                <img src="imagen/fer.jpeg" alt="Fernando">
+
+                <h3>
+                    Efraín Arellanes Regalado 
+                </h3>
+
+                <span class="cargo">
+                    Intendente
+                </span>
+
+                <p>
+
+                    Responsable del mantenimiento y limpieza
+                    de las instalaciones escolares,
+                    contribuyendo a mantener un ambiente
+                    ordenado, seguro y agradable para todos.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- INFORMACION EXTRA -->
+
+        <section class="info-extra">
+
+            <h2>
+                Compromiso Institucional
+            </h2>
+
+            <p>
+
+                El personal docente y administrativo del CECyTEO EMSaD 45
+                trabaja diariamente para brindar una educación de calidad,
+                fortaleciendo valores, responsabilidad y formación académica,
+                con el objetivo de impulsar el crecimiento profesional
+                y personal de cada estudiante.
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>Ubicación: San Pablo Tijaltepec, Oaxaca</p>
+
+        <p>Facebook: CECyTE EMSaD 45</p>
+
+        <p>Correo: emsad45@gmail.com</p>
+
+        <p>WhatsApp: 951 158 3906</p>
+
+    </footer>
+    
+</body>
+
+</html>
