@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PEC - Una Manita de Gato</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <style>
+
+        /* =========================
+           ESTILO GENERAL
+        ========================== */
+
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0F172A, #1E293B);
+            color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header{
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 20px;
+            border-bottom: 4px solid #22C55E;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .header-container{
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container img{
+            width: 130px;
+            margin-right: 25px;
+        }
+
+        h1{
+            font-size: 36px;
+            color: #F8FAFC;
+        }
+
+        /* =========================
+           MENU
+        ========================== */
+
+        nav{
+            background-color: #1E293B;
+            padding: 18px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li{
+            margin: 10px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #2563EB;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px rgba(37,99,235,0.4);
+        }
+
+        nav ul li a:hover{
+            background-color: #22C55E;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        main{
+            width: 88%;
+            margin: auto;
+            margin-top: 40px;
+            background-color: rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.4);
+        }
+
+        /* =========================
+           TITULO
+        ========================== */
+
+        .titulo{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo h2{
+            font-size: 50px;
+            color: #38BDF8;
+            margin-bottom: 15px;
+        }
+
+        .titulo p{
+            font-size: 20px;
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           INFORMACION
+        ========================== */
+
+        .info{
+            background-color: rgba(255,255,255,0.07);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+            line-height: 1.9;
+            font-size: 18px;
+            text-align: justify;
+            border-left: 5px solid #22C55E;
+        }
+
+        .info h3{
+            color: #38BDF8;
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        .info p{
+            color: #E2E8F0;
+        }
+
+        /* =========================
+           GALERIA
+        ========================== */
+
+        .galeria{
+            margin-top: 60px;
+        }
+
+        .galeria h2{
+            text-align: center;
+            color: #38BDF8;
+            font-size: 42px;
+            margin-bottom: 35px;
+        }
+
+        .contenedor-imagenes{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .imagen{
+            width: 300px;
+            height: 220px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: 20px;
+            border: 3px dashed #22C55E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 21px;
+            text-align: center;
+            padding: 15px;
+            transition: 0.3s;
+            color: #E2E8F0;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+
+        .imagen:hover{
+            transform: scale(1.05);
+            background-color: rgba(255,255,255,0.12);
+        }
+
+        /* =========================
+           EXTRA
+        ========================== */
+
+        .extra{
+            background-color: rgba(255,255,255,0.06);
+            margin-top: 55px;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        }
+
+        .extra h2{
+            color: #38BDF8;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .extra p{
+            font-size: 18px;
+            line-height: 1.9;
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer{
+            background-color: #020617;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            border-top: 4px solid #22C55E;
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media screen and (max-width: 900px){
+
+            .contenedor-imagenes{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .imagen{
+                width: 90%;
+            }
+
+            h1{
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-container">
+
+            <img src="img/LOGO DEL CECYTE.png" alt="Logo">
+
+            <h1>
+                PROYECTO PEC
+            </h1>
+
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="Inicio.html">INICIO</a></li>
+
+            <li><a href="Inscripciones.html">INSCRIPCIONES</a></li>
+
+            <li><a href="becas.html">BECAS</a></li>
+
+            <li><a href="docentes.html">DOCENTES</a></li>
+
+            <li><a href="actividades.html">ACTIVIDADES</a></li>
+
+            <li><a href="pec.html">PEC</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- TITULO -->
+
+        <section class="titulo">
+
+            <h2>
+                “Una Manita de Gato”
+            </h2>
+
+            <p>
+                Proyecto ecológico y de mejoramiento institucional.
+            </p>
+
+        </section>
+
+        <!-- INFORMACION -->
+
+        <section class="info">
+
+            <h3>
+                🌱 Descripción del Proyecto
+            </h3>
+
+            <p>
+
+                El proyecto “Una Manita de Gato” tiene como propósito
+                fomentar en los estudiantes la responsabilidad,
+                el trabajo colaborativo y el cuidado del medio ambiente
+                dentro de la institución educativa.
+
+            </p>
+
+            <p>
+
+                Como parte de esta actividad, los alumnos participaron
+                llevando distintos tipos de plantas y flores para
+                sembrarlas en diversas áreas verdes de la escuela,
+                contribuyendo al embellecimiento de jardines y espacios
+                comunes.
+
+            </p>
+
+            <p>
+
+                Además, se realizaron actividades permanentes de limpieza,
+                mantenimiento y conservación de las áreas verdes,
+                fortaleciendo el sentido de pertenencia y el respeto
+                por el entorno escolar.
+
+            </p>
+
+            <p>
+
+                Este proyecto busca crear un ambiente más agradable,
+                saludable y armonioso para toda la comunidad educativa,
+                promoviendo valores de responsabilidad social y cuidado ambiental.
+
+            </p>
+
+        </section>
+
+        <!-- GALERIA -->
+
+        <section class="galeria">
+
+            <h2>
+                📸 Galería del Proyecto
+            </h2>
+
+            <div class="contenedor-imagenes">
+
+                <div class="imagen">
+                    Imagen de alumnos sembrando plantas
+                </div>
+
+                <div class="imagen">
+                    Imagen del mantenimiento de jardines
+                </div>
+
+                <div class="imagen">
+                    Imagen de áreas verdes renovadas
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- INFORMACION EXTRA -->
+
+        <section class="extra">
+
+            <h2>
+                🌿 Compromiso con la Escuela
+            </h2>
+
+            <p>
+
+                “Una Manita de Gato” representa el compromiso
+                de los estudiantes con el bienestar y mejoramiento
+                continuo de las instalaciones escolares, impulsando
+                valores de responsabilidad, trabajo en equipo
+                y conciencia ecológica.
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Todos los derechos reservados © CECyTEO
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

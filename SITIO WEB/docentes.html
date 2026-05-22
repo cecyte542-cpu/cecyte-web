@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOCENTES</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <style>
+
+        /* =========================
+           ESTILO GENERAL
+        ========================== */
+
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0F172A, #1E293B);
+            color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header{
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 20px;
+            border-bottom: 4px solid #22C55E;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .header-container{
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container img{
+            width: 130px;
+            margin-right: 25px;
+        }
+
+        h1{
+            font-size: 36px;
+            color: #F8FAFC;
+        }
+
+        /* =========================
+           MENU
+        ========================== */
+
+        nav{
+            background-color: #1E293B;
+            padding: 18px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li{
+            margin: 10px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #2563EB;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px rgba(37,99,235,0.4);
+        }
+
+        nav ul li a:hover{
+            background-color: #22C55E;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        main{
+            width: 88%;
+            margin: auto;
+            margin-top: 40px;
+            background-color: rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.4);
+        }
+
+        .titulo{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo h2{
+            font-size: 45px;
+            color: #38BDF8;
+            margin-bottom: 15px;
+        }
+
+        .titulo p{
+            font-size: 20px;
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           TARJETAS
+        ========================== */
+
+        .contenedor{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .tarjeta{
+            background-color: rgba(255,255,255,0.07);
+            width: 280px;
+            padding: 30px;
+            border-radius: 20px;
+            border-top: 5px solid #22C55E;
+            box-shadow: 0px 0px 18px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .tarjeta:hover{
+            transform: translateY(-8px);
+            background-color: rgba(255,255,255,0.12);
+        }
+
+        .tarjeta img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #22C55E;
+            margin-bottom: 18px;
+            object-fit: cover;
+            box-shadow: 0px 0px 12px rgba(34,197,94,0.4);
+        }
+
+        .tarjeta h3{
+            color: #38BDF8;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta p{
+            line-height: 1.8;
+            color: #E2E8F0;
+        }
+
+        /* =========================
+           INFORMACION EXTRA
+        ========================== */
+
+        .info{
+            background-color: rgba(255,255,255,0.06);
+            margin-top: 55px;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        }
+
+        .info h2{
+            color: #38BDF8;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .info p{
+            font-size: 18px;
+            line-height: 1.8;
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer{
+            background-color: #020617;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            border-top: 4px solid #22C55E;
+            color: #CBD5E1;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media screen and (max-width: 900px){
+
+            .contenedor{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1{
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-container">
+
+            <img src="img/LOGO DEL CECYTE.png" alt="Logo">
+
+            <h1>
+                DOCENTES Y PERSONAL CECyTEO
+            </h1>
+
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="Inicio.html">INICIO</a></li>
+
+            <li><a href="Inscripciones.html">INSCRIPCIONES</a></li>
+
+            <li><a href="becas.html">BECAS</a></li>
+
+            <li><a href="docentes.html">DOCENTES</a></li>
+
+            <li><a href="actividades.html">ACTIVIDADES</a></li>
+
+            <li><a href="pec.html">PEC</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="titulo">
+
+            <h2>
+                Personal Educativo y Administrativo
+            </h2>
+
+            <p>
+                Conoce al equipo que forma parte del CECyTEO.
+            </p>
+
+        </section>
+
+        <!-- TARJETAS -->
+
+        <section class="contenedor">
+
+            <!-- DIRECTOR -->
+
+            <div class="tarjeta">
+
+                <img src="img/director.jpg" alt="Director">
+
+                <h3>👨‍🏫 Director</h3>
+
+                <p>
+                    X Docente <br><br>
+
+                    Responsable de coordinar y supervisar
+                    las actividades académicas y administrativas
+                    de la institución.
+                </p>
+
+            </div>
+
+            <!-- SUBDIRECTOR -->
+
+            <div class="tarjeta">
+
+                <img src="img/subdirector.jpg" alt="Subdirector">
+
+                <h3>📘 Subdirector</h3>
+
+                <p>
+                    X Docente <br><br>
+
+                    Encargado de apoyar en la organización
+                    escolar y coordinación educativa.
+                </p>
+
+            </div>
+
+            <!-- DOCENTE -->
+
+            <div class="tarjeta">
+
+                <img src="img/docente.jpg" alt="Docente">
+
+                <h3>🧑‍🏫 Docente</h3>
+
+                <p>
+                    X Docente <br><br>
+
+                    Responsable de brindar enseñanza,
+                    orientación y formación académica
+                    a los estudiantes.
+                </p>
+
+            </div>
+
+            <!-- LIMPIEZA -->
+
+            <div class="tarjeta">
+
+                <img src="img/limpieza.jpg" alt="Limpieza">
+
+                <h3>🧹 Área de Limpieza</h3>
+
+                <p>
+                    X Docente <br><br>
+
+                    Encargada de mantener limpias y en
+                    óptimas condiciones las instalaciones
+                    escolares.
+                </p>
+
+            </div>
+
+            <!-- COMPUTO -->
+
+            <div class="tarjeta">
+
+                <img src="img/computo.jpg" alt="Sala de computo">
+
+                <h3>💻 Sala de Cómputo</h3>
+
+                <p>
+                    X Docente <br><br>
+
+                    Responsable del apoyo técnico y del
+                    mantenimiento del laboratorio de informática.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- INFORMACION EXTRA -->
+
+        <section class="info">
+
+            <h2>
+                Compromiso Educativo
+            </h2>
+
+            <p>
+                Nuestro personal trabaja diariamente para
+                ofrecer educación de calidad, fomentar los
+                valores institucionales y mantener un ambiente
+                adecuado para el desarrollo integral de todos
+                los estudiantes del CECyTEO.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Todos los derechos reservados © CECyTEO
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

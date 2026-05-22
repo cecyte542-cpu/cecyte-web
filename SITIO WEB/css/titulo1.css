@@ -1,0 +1,135 @@
+body{
+    background-color: rgb(56, 121, 227);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LOGO */
+
+img{
+    width: 180px;
+    padding: 10px 20px;
+}
+
+/* ENCABEZADO */
+
+.header-container{
+    display: flex;
+    align-items: center;
+    background-color: rgb(160, 241, 250);
+    padding: 20px;
+}
+
+h1{
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+/* MENU */
+
+nav{
+    text-align: center;
+    margin: 20px 60px;
+}
+
+ul{
+    padding: 10px;
+}
+
+li{
+    display: inline-block;
+    background-color: rgb(204, 235, 95);
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+li:hover{
+    background-color: rgb(223, 156, 55);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover{
+    color: white;
+}
+
+/* CONTENIDO */
+
+main{
+    background-color: rgba(255, 253, 73, 0.75);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* TITULOS */
+
+h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* TEXTO */
+
+p{
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* VIDEO */
+
+video{
+    width: 90%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* COLUMNAS */
+
+.columnas{
+    width: 40%;
+    float: left;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+/* LIMPIAR FLOAT */
+
+.limpiar{
+    clear: both;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(233, 128, 52);
+    margin-top: 40px;
+    padding: 30px;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* IMAGENES */
+
+.imagen{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+.normal{
+    margin: 40px 100px;
+}
